@@ -4,7 +4,7 @@
             <div class="container">
                 <h1>Réalisations</h1>
                 <div id="typed-strings">
-                    <p>Vous trouverez un apérçu des projets que j’ai réalisé, avec quelques petits détails concernant les technologies et les langages utilisés...</p>
+                    <p>Vous trouverez un aperçu des projets que j’ai réalisés, avec quelques petits détails concernant les technologies et les langages utilisés.</p>
                 </div>
                 <div class="typed-container">
                     <span id="typed"></span>

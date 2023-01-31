@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php include('common/head.php'); ?>
-    <body>
+    <body class="<?=$_SESSION['theme']?>">
         <?php 
             include ('common/header.php');
             if(!isset($page)){
@@ -35,6 +35,12 @@
             stringsElement: '#typed-strings',
             typeSpeed: 35
         });
+        </script>
+        <script>
+            <?php
+                $themeName = !empty($_SESSION['theme']) ? $_SESSION['theme'] : 'claire';
+                echo 'var THEME = "' . $themeName . '"';
+            ?>
         </script>
         <script src="js/scripts.js"></script>
     </body>

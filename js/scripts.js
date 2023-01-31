@@ -1,21 +1,13 @@
 const BURGERBTN = document.querySelector('.navigation__btn');
-const CYBERPUNK = document.querySelector('.theme__button--cyberpunk');
 const PREVSLIDE = document.querySelector('.realisations-nav__btn--prev');
 const NEXTSLIDE = document.querySelector('.realisations-nav__btn--next');
 const SLIDES = document.querySelectorAll('.realisations__item');
 let curSlide = 0;
 let maxSlide = SLIDES.length - 1;
 
-
 //Burger menu
 BURGERBTN.addEventListener('click', function () {
     BURGERBTN.classList.toggle('navigation__btn--close');
-});
-
-//Theme
-CYBERPUNK.addEventListener('click', function () {
-    var element = document.body;
-    element.classList.add('cyberpunk');
 });
 
 //Slider

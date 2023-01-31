@@ -4,7 +4,7 @@
             <div class="container">
                 <h1>Veilles technologiques</h1>
                 <div id="typed-strings">
-                    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+                    <p>Cette page contient des informations sur les technologies que j'ai expérimentées au cours de mes études dans le cadre de la formation "Titre professionnel développeur web et web mobile".</p>
                 </div>
                 <div class="typed-container">
                     <span id="typed"></span>

@@ -2,10 +2,10 @@
     <div class="container-footer">
         <ul class="theme__list">
             <li class="theme__item">
-                <button class="theme__button theme__button--light">Claire</button>
+                <a href="?theme=claire" class="theme__button theme__button--light">Claire</a>
             </li>
             <li class="theme__item">
-                <button class="theme__button theme__button--cyberpunk">Cyberpunk</button>
+                <a href="?theme=cyberpunk" class="theme__button theme__button--cyberpunk">Cyberpunk</a>
             </li>
         </ul>
         <ul class="social__list">

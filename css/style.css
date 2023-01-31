@@ -13,7 +13,7 @@
     --text-c: black;
     --link-c-h: #528EBA;
     --cyberpunk-bg-c: rgba(31, 31, 31, 1);
-    --cyberpunk-text-c-: white;
+    --cyberpunk-text-c: white;
     --cyberpunk-text-shadow: -1px -1px 0 var(--primary-color-intense), 1px 1px 0 var(--secondary-color-intense);;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .cyberpunk {
-    color: var(--cyberpunk-text-c-);
+    color: var(--cyberpunk-text-c);
     background-color: var(--cyberpunk-bg-c);
 }
 
@@ -52,6 +52,16 @@ footer a:active,
 main a:hover,
 main a:active  {
     color: var(--link-c-h);
+}
+
+.cyberpunk header a:hover,
+.cyberpunk header a:active,
+.cyberpunk footer a:hover,
+.cyberpunk footer a:active,
+.cyberpunk main a:hover,
+.cyberpunk main a:active  {
+    color: var(--cyberpunk-text-c);
+    text-shadow: var(--cyberpunk-text-shadow);
 }
 
 main a:active,
@@ -115,6 +125,16 @@ header {
     stroke: var(--secondary-color-intense);
 }
 
+.cyberpunk .logo:hover svg .elem,
+.cyberpunk .logo:active svg .elem {
+    fill: var(--secondary-color-intense);
+}
+
+.cyberpunk .logo:hover svg .base,
+.cyberpunk .logo:active svg .base {
+    stroke: var(--primary-color-intense);
+}
+
 @media screen and (min-width: 768px) {
     header {
         flex-direction: column;
@@ -144,7 +164,6 @@ header {
     left: 0;
     width: 100vw;
     background-color: var(--primary-color);
-    /* transform: translateY(-150%); */
     /* transition: 1s; */
     visibility: hidden;
     z-index: 4;
@@ -161,13 +180,26 @@ header {
     display: flex;
     width: 45px;
     height: 45px;
-    background: url(../assets/img/icon-menu-open.svg) center center no-repeat;
+    padding: 5px;
+    background-color: transparent;
     border: 0;
     cursor: pointer;
 }
 
-.navigation__btn--close {
-    background: url(../assets/img/icon-menu-close.svg) center center no-repeat;
+.navigation__btn svg,
+.navigation__btn--close svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--text-c);
+}
+
+.navigation__btn .menu-close,
+.navigation__btn--close .menu-open {
+    display: none;
+}
+
+.navigation__btn--close .menu-close {
+    display: flex;
 }
 
 .navigation__btn--close + .navigation__list{
@@ -182,6 +214,11 @@ header {
 .cyberpunk .navigation__link:active {
     color: white;
     text-shadow: var(--cyberpunk-text-shadow);
+}
+
+.cyberpunk .navigation__btn svg,
+.cyberpunk .navigation__btn--close svg {
+    fill: var(--cyberpunk-text-c);
 }
 
 @media screen and (min-width: 768px) {
@@ -418,12 +455,20 @@ h1 {
     }
 
     .cyberpunk .realisations-nav__btn svg {
-        fill: var(--cyberpunk-text-c-);
+        fill: var(--cyberpunk-text-c);
     }
 
     .realisations-nav__btn:hover svg,
     .realisations-nav__btn:active svg {
         fill: var(--link-c-h);
+    }
+
+    .cyberpunk .realisations-nav__btn:hover svg {
+        fill: var(--secondary-color-intense);
+    }
+
+    .cyberpunk .realisations-nav__btn:active svg {
+        fill: var(--primary-color-intense);
     }
 
     .realisations-nav__btn:disabled {
@@ -556,21 +601,23 @@ h1 {
 
 @media screen and (min-width: 768px) {
     .connaissance__name {
-        display: block;
-        visibility: hidden;
-        width: 120px;
-        background-color: var(--primary-color-dark);
-        color: #fff;
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 6px;
-        
-        /* Position the tooltip text - see examples below! */
         position: absolute;
         bottom: 100%;
         left: 50%;
+        display: block;
+        width: 120px;
+        text-align: center;
+        color: #fff;
+        padding: 5px 0;
+        background-color: var(--primary-color-dark);
+        border-radius: 4px;
         margin-left: -60px;
+        visibility: hidden;
         z-index: 1;
+    }
+
+    .cyberpunk .connaissance__name {
+        background-color: var(--primary-color-intense);
     }
 
     .connaissance__value:hover .connaissance__name {
@@ -646,7 +693,15 @@ footer {
 }
 
 .cyberpunk .social__link svg {
-    fill: var(--cyberpunk-text-c-);
+    fill: var(--cyberpunk-text-c);
+}
+
+.cyberpunk .social__link:hover svg {
+    fill: var(--secondary-color-intense);
+}
+
+.cyberpunk .social__link:active svg {
+    fill: var(--primary-color-intense);
 }
 
 @media screen and (min-width: 768px) {
@@ -661,10 +716,12 @@ footer {
         top: 0;
         width: max-content;
         gap: 20px;
+        margin-top: 20px;
     }
 
     .social__list {
         position: fixed;
         bottom: 0;
+        margin-bottom: 20px;
     }
 }

@@ -4,7 +4,7 @@
             <div class="container">
                 <h1>Contact</h1>
                 <div id="typed-strings">
-                    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+                    <p>Vous pouvez communiquer avec moi en utilisant mes coordonnées sur cette page.</p>
                 </div>
                 <div class="typed-container">
                     <span id="typed"></span>

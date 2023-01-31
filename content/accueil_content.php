@@ -4,7 +4,7 @@
             <div class="container">
                 <h1>Olena Ilchenko</h1>
                 <div id="typed-strings">
-                    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+                    <p>Bienvenue sur ma page de portfolio.</p>
                 </div>
                 <div class="typed-container">
                     <span id="typed"></span>
